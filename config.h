@@ -18,11 +18,9 @@ static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "SauceCodePro Nerd Font Mono:size=16" };
 
 
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
+static const char col_gray0[]       = "#444444";
 static const char col_gray[]        = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_gray2[]       = "#eeeeee";
 /* dracula scheme */
 static const char col_bg[]       = "#282a36";
 static const char col_sel[]      = "#44475a";
@@ -32,10 +30,10 @@ static const char col_pur[]      = "#bd93f9";
 static const char col_gre[]      = "#50fa7b";
 static const char col_can[]      = "#8be9fd";
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_fg,   col_sel,   col_pur  },
-	[SchemeHid]  = { col_cyan,  col_gray1, col_pur  },
+	/*               fg           bg         border   */
+	[SchemeNorm] = { col_fg,     col_bg,    col_bg },
+	[SchemeSel]  = { col_pur,    col_sel,   col_pur  },
+	[SchemeHid]  = { col_gray0, col_bg,    col_pur  },
 };
 
 /* alpha*/
@@ -96,6 +94,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, togglescratch,  {.v = scratchpadcmd } },
+	{ MODKEY,                       XK_c,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
