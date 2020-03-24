@@ -31,7 +31,7 @@ static const char col_gre[]      = "#50fa7b";
 static const char col_can[]      = "#8be9fd";
 static const char *colors[][3]      = {
 	/*               fg           bg         border   */
-	[SchemeNorm] = { col_fg,     col_bg,    col_bg },
+	[SchemeNorm] = { col_fg,     col_bg,    col_gray0 },
 	[SchemeSel]  = { col_pur,    col_sel,   col_pur  },
 	[SchemeHid]  = { col_gray0, col_bg,    col_pur  },
 };
