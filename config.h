@@ -87,7 +87,7 @@ static const char *dmenucmd[] = { "dmenu_recency",NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
-static const char *browsercmd[]  = { "google-chrome-stable", NULL };
+static const char *browsercmd[]  = { "qutebrowser", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
